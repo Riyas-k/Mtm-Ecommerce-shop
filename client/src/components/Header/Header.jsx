@@ -2,6 +2,8 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Images/logo.jpeg";
 import "./Header.css"
+import "../../styles/Common.css"
+import "../../styles/responsive.css"
 const Header = () => {
   return (
     <header className="header">

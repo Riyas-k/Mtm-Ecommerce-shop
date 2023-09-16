@@ -3,7 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../assets/Images/logo.jpeg";
 import "./Fooer.css"
-
+import "../../styles/Common.css"
+import "../../styles/responsive.css"
 const Footer = () => {
   return (
     <footer className='footer'>
