@@ -24,7 +24,7 @@ export const getSignUp = (email, name, phone, hashPassword) => {
         Password: hashPassword,
       });
       await newData.save().then(() => {
-        resolve({status:true});
+        resolve({ status: true });
       });
     } catch (error) {
       console.log(error);
@@ -32,13 +32,25 @@ export const getSignUp = (email, name, phone, hashPassword) => {
   });
 };
 
-export const getUser = (email)=>{
-    return new Promise(async(resolve,reject)=>{
-        try {
-            let data = await User.findOne({Email:email})
-            resolve(data)
-        } catch (error) {
-            console.log(error);
-        }
-    })
-}
+export const getUser = (email) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      let data = await User.findOne({ Email: email });
+      resolve(data);
+    } catch (error) {
+      console.log(error);
+    }
+  });
+};
+export const updatePassword = (email,password)=>{
+  return new Promise(async(resolve,reject)=>{
+     try {
+        let response = await User.updateOne({Email:email},{$set:{Password:password}})
+         if(response){
+          resolve({status:true})
+         }
+     } catch (error) {
+      console.log(error);
+     }
+  })
+};

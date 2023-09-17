@@ -1,4 +1,4 @@
-import { checkEmail, getSignUp, getUser } from "../helpers/user-helpers.js";
+import { checkEmail, getSignUp, getUser, updatePassword } from "../helpers/user-helpers.js";
 import {
   getUserToken,
   hashPassword,
@@ -36,6 +36,24 @@ export const userLogin = async (req, res) => {
         res.json({ userData, token: token });
       }
     }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const forgotPassword = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const verify = await checkEmail(email);
+     if(!verify){
+      res.json({status:false})
+     }else{
+      const hasPassword = await hashPassword(password)
+      const update = await updatePassword(email,hasPassword)
+      if(update){
+        res.json(update)
+      }
+     }
   } catch (error) {
     console.log(error);
   }
