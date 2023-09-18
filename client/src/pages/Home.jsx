@@ -13,19 +13,15 @@ import customer4 from "../assets/Images/HomeImgs/customers/customer-4.jpg"
 import customer5 from "../assets/Images/HomeImgs/customers/customer-5.jpg"
 import customer6 from "../assets/Images/HomeImgs/customers/customer-6.jpg"
 
-import hero from "../assets/Images/HomeImgs/hero-min.png"
+import hero from "../assets/Images/HomeImgs/hero.png"
 import heroMin from "../assets/Images/HomeImgs/hero-min.png"
 
-import techchurch from "../assets/Images/HomeImgs/logos/techcrunch.png"
-import businessInsider from "../assets/Images/HomeImgs/logos/business-insider.png"
-import newyork from "../assets/Images/HomeImgs/logos/the-new-york-times.png"
-import forbes from "../assets/Images/HomeImgs/logos/forbes.png"
-import usa from "../assets/Images/HomeImgs/logos/usa-today.png"
+import noltalogo from "../assets/Images/test/noltaLogo.png"
+import borosilLogo from "../assets/Images/test/Borosil-Logo.jpg"
+import greenchef from "../assets/Images/test/greenlogo.png"
 
 
-import screen1 from "../assets/Images/HomeImgs/app/app-screen-1.png"
-import screen2 from "../assets/Images/HomeImgs/app/app-screen-2.png"
-import screen3 from "../assets/Images/HomeImgs/app/app-screen-3.png"
+
 
 import meal1 from "../assets/Images/HomeImgs/meals/meal-1.jpg"
 import meal2 from "../assets/Images/HomeImgs/meals/meal-2.jpg"
@@ -47,6 +43,8 @@ import galery9 from  "../assets/Images/HomeImgs/gallery/gallery-9.jpg"
 import galery10 from  "../assets/Images/HomeImgs/gallery/gallery-10.jpg"
 import galery11 from  "../assets/Images/HomeImgs/gallery/gallery-11.jpg"
 import galery12 from  "../assets/Images/HomeImgs/gallery/gallery-12.jpg"
+
+import CategoryCard from '../components/Ui/CategoryCard';
 const Home = () => {
   return (
     <main>
@@ -98,94 +96,41 @@ const Home = () => {
     
           <section className="section-featured">
             <div className="container">
-              <h2 className="heading-featured-in">As featured in</h2>
+              <h2 className="heading-featured-in">Top Brands</h2>
               <div className="logos">
-                <img src={techchurch} alt="Techcrunch logo" />
+                <img src={noltalogo} alt="Techcrunch logo" />
                 <img
-                  src={businessInsider}
+                  src={borosilLogo}
                   alt="Business Insider logo"
                 />
                 <img
-                  src={newyork}
+                  src={greenchef}
                   alt="The New York Times logo"
                 />
-                <img src={forbes} alt="Forbes logo" />
-                <img src={usa} alt="USA Today logo" />
+                <img src={greenchef} alt="Forbes logo" />
+                <img src={greenchef} alt="USA Today logo" />
               </div>
             </div>
           </section>
     
-          <section className="section-how" id="how">
+
+
+
+
+          <section className="section-how">
             <div className="container">
-              <span className="subheading">How it works</span>
-              <h2 className="heading-secondary">
-                Your daily dose of health in 3 simple steps
-              </h2>
-            </div>
-    
-            <div className="container grid grid--2-cols grid--center-v">
-    
-              <div className="step-text-box">
-                <p className="step-number">01</p>
-                <h3 className="heading-tertiary">
-                  Tell us what you like (and what not)
-                </h3>
-                <p className="step-description">
-                  Never again waste time thinking about what to eat! Omnifood AI
-                  will create a 100% personalized weekly meal plan just for you. It
-                  makes sure you get all the nutrients and vitamins you need, no
-                  matter what diet you follow!
-                </p>
-              </div>
-    
-              <div className="step-img-box">
-                <img
-                  src={screen1}
-                  className="step-img"
-                  alt="iPhone app
-                preferences selection screen"
-                />
-              </div>
-    
-          
-              <div className="step-img-box">
-                <img
-                  src={screen2}
-                  className="step-img"
-                  alt="iPhone app
-                meal approving plan screen"
-                />
-              </div>
-              <div className="step-text-box">
-                <p className="step-number">02</p>
-                <h3 className="heading-tertiary">Approve your weekly meal plan</h3>
-                <p className="step-description">
-                  Once per week, approve the meal plan generated for you by Omnifood
-                  AI. You can change ingredients, swap entire meals, or even add
-                  your own recipes.
-                </p>
-              </div>
-    
-            
-              <div className="step-text-box">
-                <p className="step-number">03</p>
-                <h3 className="heading-tertiary">Receive meals at convenient time</h3>
-                <p className="step-description">
-                  Best chefs in town will cook your selected meal every day, and we
-                  will deliver it to your door whenever works best for you. You can
-                  change delivery schedule and address daily!
-                </p>
-              </div>
-              <div className="step-img-box">
-                <img
-                  src={screen3}
-                  className="step-img"
-                  alt="iPhone app
-                delivery screen"
-                />
-              </div>
+              <span className="subheading">Shop by Categories</span>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-6">
+                 <CategoryCard/>
+             </div>
             </div>
           </section>
+
+
+
+
+
     
           <section className="section-meals" id="meals">
             <div className="container center-text">
