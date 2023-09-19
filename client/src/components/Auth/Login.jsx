@@ -1,7 +1,16 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect } from "react";
 import logImg from "../../assets/Images/logImg.jpeg";
+import axios from '../../axios/config'
+
 const Login = () => {
+  const checkBackend = async()=>{
+    const data = await axios.post('/user/login')
+    console.log(data);
+  }
+  useEffect(()=>{
+   checkBackend()
+  })
   return (
     <section className=" min-h-fit mt-12 flex items-center justify-center">
       <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-4xl items-center">
